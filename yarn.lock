@@ -3888,6 +3888,10 @@ jade@~1.9.2:
     void-elements "~2.0.1"
     with "~4.0.0"
 
+jeet@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/jeet/-/jeet-7.2.0.tgz#2aa562a2dc1d74cc99527113f16a821e974e30ee"
+
 jodid25519@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
@@ -6652,6 +6656,15 @@ typedarray@~0.0.5:
 ua-parser-js@0.7.10:
   version "0.7.10"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.10.tgz#917559ddcce07cbc09ece7d80495e4c268f4ef9f"
+
+uglify-js@^2.4.19:
+  version "2.8.29"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
+  dependencies:
+    source-map "~0.5.1"
+    yargs "~3.10.0"
+  optionalDependencies:
+    uglify-to-browserify "~1.0.0"
 
 uglify-js@^2.6, uglify-js@^2.6.0, uglify-js@~2.7.3:
   version "2.7.4"

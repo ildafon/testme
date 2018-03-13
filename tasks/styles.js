@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
 import rupture from 'rupture';
+import jeet from 'jeet';
 import stylint from 'gulp-stylint';
 import stylus from 'gulp-stylus';
 import importIfExist from 'stylus-import-if-exist';
@@ -14,6 +15,12 @@ import errorHandler from 'gulp-plumber-error-handler';
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
+gulp.task('fonts', () => (
+	gulp.src('app/styles/helpers/fonts/*')
+		.pipe(gulp.dest('dist/assets/styles/fonts'))
+));
+
+
 gulp.task('styles', () => (
 	gulp.src('app/styles/*.styl')
 		.pipe(plumber({errorHandler: errorHandler(`Error in \'styles\' task`)}))
@@ -21,6 +28,7 @@ gulp.task('styles', () => (
 		.pipe(stylus({
 			use: [
 				importIfExist(),
+				jeet(),
 				rupture(),
 				autoprefixer()
 			],
