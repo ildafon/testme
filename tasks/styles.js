@@ -20,6 +20,11 @@ gulp.task('fonts', () => (
 		.pipe(gulp.dest('dist/assets/styles/fonts'))
 ));
 
+gulp.task('swiper', () => (
+	gulp.src('app/styles/helpers/swiper.min.css')
+		.pipe(gulp.dest('dist/assets/styles/'))
+));
+
 
 gulp.task('styles', () => (
 	gulp.src('app/styles/*.styl')
