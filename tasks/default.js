@@ -17,6 +17,7 @@ gulp.task('default', () => (
 			'templates'
 		],
 		'server',
+		'php',
 		'watch'
 	)
 ));
