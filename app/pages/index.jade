@@ -1,9 +1,14 @@
 extends /blocks/layout-default/layout-default
+include ../blocks/music/music
+include ../blocks/subscription/subscription
+include ../blocks/slider/slider
 
 block head
 	- var pageTitle = 'Project Template';
 
 block music
-
+	+music
+		+subscription
+		+slider
 
 
