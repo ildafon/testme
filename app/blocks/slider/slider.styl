@@ -13,3 +13,48 @@
 	+below(1920px)
 		height 200px
 
+.swiper-slide
+	display flex
+	flex-direction column
+	align-items center
+	justify-content end
+	border-radius 10px
+	// background-color #007aff
+
+	&__title
+
+
+		font-size 1.5rem
+		font-weight 500
+
+		color white
+
+		margin-top 40%
+		margin-bottom 8%
+
+	&__director
+
+
+		font-size .875rem
+		font-weight 400
+
+		color white
+		opacity .5
+
+.swiper-button-next
+	visibility hidden
+
+.swiper-button-prev
+	size(30px)
+	top 53.5%
+	left 4%
+
+	border-radius 50%
+	background-image url('../../arrow_icon.png')
+	background-size 70%
+	background-color rgba(1, 1, 1, .1)
+	+below(1920px)
+		left 60px
+
+
+
