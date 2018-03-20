@@ -9,26 +9,28 @@ $(() => {
 
 
 $( document ).ready(function () {
-	const mySwiper = new Swiper('.swiper-container', {
-		spaceBetween: 30,
-		slidesPerView: 2.64,
-		loop: true,
-		breakpoints: {
-			1919: {
-				slidesPerView: 1.3,
-				spaceBetween: 25,
-				slidesOffsetBefore: 50,
-				slidesOffsetAfter: 10
-			}
-		},
-		navigation: {
-			prevEl: '.swiper-button-prev',
-			nextEl: '.swiper-button-next'
-		}
 
-	});
 	getData()
 		.then(function (data) {
+			const mySwiper = new Swiper('.swiper-container', {
+				spaceBetween: 30,
+				slidesPerView: 2.64,
+				loop: true,
+				loopedSlides: data.length,
+				breakpoints: {
+					1919: {
+						slidesPerView: 1.3,
+						spaceBetween: 25,
+						slidesOffsetBefore: 50,
+						slidesOffsetAfter: 10
+					}
+				},
+				navigation: {
+					prevEl: '.swiper-button-prev',
+					nextEl: '.swiper-button-next'
+				}
+
+			});
 			console.log(data);
 			for (const i in data){
 				mySwiper.appendSlide(
@@ -38,6 +40,7 @@ $( document ).ready(function () {
 					</div>`
 				);
 			}
+			mySwiper.init();
 		})
 		.catch(function (error) {
 			console.error(error);

@@ -1,52 +1,63 @@
 .subscription
+	span(1/2)
 	position relative
+
 	display flex
 	align-items center
-	span(1/2)
+
 	height 100%
+
 	+below(1920px)
 		stack()
 		height 380px
 
 	&__container
+		size(100%,50%)
+
 		position relative
 		z-index 2
+
 		display flex
 		flex-direction column
-		size(100%,50%)
-		background-color rgba(245,240,234,.5)
-		padding-left 37.5%
+
 		padding-top 4.8%
+		padding-left 37.5%
+
+		background-color rgba(245,240,234,.5)
+
 		+below(1920px)
 			size(100%,100%)
 			align-items center
+
 			padding-top 75px
 			padding-left 0
 
 	&__container::after
+		size(5%,70%)
 		content ""
 		display block
+
 		position absolute
 		top 50%
+		right: 0
 		transform translateY(-50%)
 		z-index 1
-		size(5%,70%)
-		right: 0
-		box-shadow 10px 0 15px -10px #888
+
+
+		box-shadow 10px 0 15px -15px #888
 		background-color trasparent
 
-
-
-
 	&__bg
+		size(26.1%, 72.4%)
 		position absolute
 		z-index 1
-		size(26.1%, 72.4%)
-		left 0
 		top 50%
 		transform translateY(-50%)
+		left 0
+
 		background-color #f5f0ea
 		background-image url("../../accessories_large.png")
+
 		+below(1920px)
 			display none
 
@@ -57,12 +68,12 @@
 	letter-spacing 1.4px
 	margin-bottom 20px
 
-
 .subcribe-content
 	font-weight 600
 	font-size 60px
 	line-height 72px
 	margin-bottom 45px
+
 	+below(1920px)
 		text-align center
 		font-size 40px
@@ -72,13 +83,15 @@
 .subcribe-buttom
 	display inline-block
 	width 167px
+	padding 18px 25px
+
 	font-size 15px
-	line-height 15px
 	font-weight 400
+	line-height 15px
 	letter-spacing 2.4px
+	text-decoration none
 
 	color white
-	padding 18px 25px
-	background-color #ce477d
 
+	background-color #ce477d
 	border-radius 5px
